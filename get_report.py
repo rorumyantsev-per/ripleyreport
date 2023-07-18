@@ -15,8 +15,8 @@ st.set_page_config(layout="wide")
 FILE_BUFFER = io.BytesIO()
 CLAIM_SECRETS = st.secrets["CLAIM_SECRETS"]
 API_URL = st.secrets["API_URL"]
-SECRETS_MAP = {"Oechshle": 0, "Oechsle Vente en Verde": 1}
-CLIENTS_MAP = {0: "Oechsle", 1: "Oechsle Vente en Verde"}
+SECRETS_MAP = {"Ripley salavery": 0, "Ripley Chorisos": 1}
+CLIENTS_MAP = {0: "Ripley salavery", 1: "Ripley Chorisos"}
 
 statuses = {
     'delivered': {'type': '4. delivered', 'state': 'in progress'},
@@ -179,7 +179,7 @@ def get_report(period, start_, end_) -> pandas.DataFrame:
     return result_frame
 
 
-st.markdown(f"# Informe de rutas para Oechsle")
+st.markdown(f"# Informe de rutas para Ripley")
 
 if st.sidebar.button("Actualizar datos", type="primary"):
     st.cache_data.clear()
